@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OAuth Token</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+                color: #333;
+            }
+
+            h1 {
+                font-size: 36px;
+                font-weight: 500;
+            }
+
+            div.instructions {
+                display: block;
+                max-width: 600px;
+                width: 90%;
+                margin: 0 auto 20px auto;
+                padding: 10px;
+            }
+
+            div.token-box {
+                display: block;
+                border: 1px solid #ddd;
+                font-size: 125%;
+                max-width: 600px;
+                width: 90%;
+                margin: 0 auto;
+                border-radius: 3px;
+            }
+
+            div.header {
+                background-color: #f5f5f5;
+                padding: 10px;
+            }
+
+            div#body {
+                padding: 10px;
+                border-top: 1px solid #ddd;
+            }
+
+            a {
+                color: #08c;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+<body>
+    <h1>OAuth Token</h1>
+    <div class="instructions">
+        Please copy the OAuth token and paste it into the command prompt.
+    </div>
+    <div class="token-box">
+        <div class="header">
+            <a id="show" href="javascript:void(0);">Show</a>
+        </div>
+        <div id="body" style="display: none;">
+            Token: <code id="token"></code>
+        </div>
+    </div>
+</body>
+<script>
+    var token = document.location.hash;
+    token = token.replace("#acess_token=", "");
+    document.getElementById("token").innerHTML = token;
+
+    var body = document.getElementById("body");
+    var show = document.getElementById("show");
+    show.onclick = function() {
+        body.style.display = (body.style.display != "none" ? "none" : "");
+    }
+</script>
+</html>
+
