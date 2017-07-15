@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from config import *
 import http.server
 import json
