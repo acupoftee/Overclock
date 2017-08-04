@@ -1,6 +1,6 @@
 # Overclock
 
-This script will find and open the best available Twitch stream. It will first check any streams that you specify as "priority" streams, then any streams that you follow. If none of those are available, it will open the top stream for the game you specify.
+This script will find and open the best available Twitch stream. It will first check any streams that you specify as "priority" streams, then any streams that you follow. If none of those are available, it will open the top stream for the game you specify. In my case, my priority streams are Overwatch streams.
 
 I'm using it, along with an RTC wake-up and `at`, as a sort of alarm clock ([see how](https://medium.com/@acupoftee/building-a-better-alarm-clock-f5feb34e13cd)).
 
